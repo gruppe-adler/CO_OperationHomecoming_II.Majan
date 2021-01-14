@@ -1,4 +1,4 @@
-/*
+
 ["CBA_loadingScreenDone", {
     _waitCondition = {time > (_this + 3) && isGameFocused};
 
@@ -18,4 +18,3 @@
     },time] call CBA_fnc_waitUntilAndExecute;
 
 }] call CBA_fnc_addEventHandler;
-*/
