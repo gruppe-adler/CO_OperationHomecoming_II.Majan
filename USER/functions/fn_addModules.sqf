@@ -65,6 +65,7 @@
         }];
         */
 
+        [player, "homecoming_zeus_nerf", 3, true] call ace_common_fnc_setAimCoef;
 
     } forEach allCurators;
 
