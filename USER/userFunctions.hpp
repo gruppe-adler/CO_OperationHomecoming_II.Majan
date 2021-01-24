@@ -11,17 +11,22 @@ class homecoming
 
            class addModules { postInit = 1; };
            class createMusicCarrier;
+           class brokenRadio;
 
            class createSmoke;
            class fog;
            class handleDamageVehicle;
+           class handleDamageVehicleLocal;
            class intro { postInit = 1; };
            class startIntro;
+           class fillCar;
            
            class ownerShipHandler { postInit = 1; };
 
            class pilotAnim;
            class pilotPiss;
+           class putInBodyBag;
+           class putInBodyBagAction;
            
            class soundSourceHelper;
 

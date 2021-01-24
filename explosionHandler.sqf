@@ -1,21 +1,13 @@
-params ["_vehicle"];
+if (isServer) then {
 
-_vehicle addEventHandler ["HandleDamage", {
-    params ["_unit", "_selection", "_damage", "_source", "_projectile", "_hitIndex", "_instigator", "_hitPoint"];
+    ["ace_explosives_detonate", {
+        params ["_unit", "_explosive"];
 
-    hint str _projectile;
+        private _barricadestuff = nearestObjects [_explosive, ["Land_Barricade_01_10m_F", "Land_Barricade_01_4m_F", "Fort_Barricade", "Fort_Barricade_EP1"], 10, true];
 
-    switch (_projectile) do { 
-        case "SatchelCarge_Remote_Ammo" : {
-            [_unit] execVM "explosionDebris.sqf";
-        };
-        case "rhs_ammo_m136_penetrator" : {
-            if (_unit getVariable ["hitByAT", false]) then {
-                [_unit] execVM "explosionDebris.sqf";
-            };
-            _unit setVariable ["hitByAT", true, true];
-        };
+        [_explosive, _barricadestuff] execVM "explosionDebris.sqf";
+        
+    }] call CBA_fnc_addEventhandler;
+};
 
-        default {  /*...code...*/ }; 
-      };  
-}];
+// [QGVAR(detonate), [_unit, _item select 0, _item select 1]] call CBA_fnc_serverEvent;

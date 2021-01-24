@@ -14,6 +14,8 @@ if (_createDummy) then {
     _helper setPos _posFinal;
     _helper setObjectTextureGlobal [0,"#(argb,8,8,3)color(0,0,0,0,ca)"];
     _helper setVariable ["soundSource", _source, true];
+} else {
+    _helper setVariable ["soundSource", _source, true];
 };
 
 {
@@ -25,9 +27,18 @@ _helper addEventHandler ["Deleted", {
   deleteVehicle (_entity getVariable ["soundSource", objNull]);
 }];
 
+_helper addEventHandler ["HitPart", {
+  (_this select 0) params ["_target", "_shooter", "_projectile", "_position", "_velocity", "_selection", "_ammo", "_vector", "_radius", "_surfaceType", "_isDirect"];
+  
+  private _pos = getPos _target;
+  deleteVehicle (_target getVariable ["soundSource", objNull]);
+
+  [_target] remoteExecCall ["homecoming_fnc_brokenRadio", 0, true];
+
+}];
 
 if (!_createDummy) then {
-    _helper addEventHandler ["MPKilled", {
+    _helper addMPEventHandler ["MPKilled", {
         params ["_entity"];
         deleteVehicle (_entity getVariable ["soundSource", objNull]);
     }];

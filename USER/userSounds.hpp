@@ -4,3 +4,10 @@
 */
 
  #include "..\node_modules\grad-leaveNotes\cfgSounds.hpp"
+
+class buzz
+{
+    name = "buzz";
+    sound[] = {getMissionPath "USER\sound\buzz.ogg", 1, 1, 50};
+    titles[] = {0,""};
+};

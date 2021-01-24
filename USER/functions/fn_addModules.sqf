@@ -3,25 +3,32 @@
     waitUntil {  time > 3 };
 
     {
-  
-        _x addEventHandler ["CuratorGroupPlaced", {
-            params ["", "_group"];
-            ["GRAD_missionControl_setServerAsOwner", [_group]] call CBA_fnc_serverEvent;
-        }];
+      
+        if (local _x) then {
+          
+          _x addEventHandler ["CuratorGroupPlaced", {
+              params ["", "_group"];
+              ["GRAD_missionControl_setServerAsOwner", [_group]] call CBA_fnc_serverEvent;
+          }];
 
-        _x addEventHandler ["CuratorObjectPlaced", {
-            params ["", "_object"];
+          _x addEventHandler ["CuratorObjectPlaced", {
+              params ["", "_object"];
 
-            if (_object isKindOf "CAManBase") then {
-                if (count units _object == 1) then {
-                    ["GRAD_missionControl_setServerAsOwner", [group _object]] call CBA_fnc_serverEvent;
-                };
-            } else {
-                if (count crew _object > 1) then {
-                    ["GRAD_missionControl_setServerAsOwner", [group (crew _object select 0)]] call CBA_fnc_serverEvent;
-                };
-            };
-        }];
+              if (_object isKindOf "CAManBase") then {
+                  if (count units _object == 1) then {
+                      ["GRAD_missionControl_setServerAsOwner", [group _object]] call CBA_fnc_serverEvent;
+                  };
+              } else {
+                  if (count crew _object > 1) then {
+                      ["GRAD_missionControl_setServerAsOwner", [group (crew _object select 0)]] call CBA_fnc_serverEvent;
+                  };
+              };
+          }];
+
+        };
+
+        
+        
 
         /*
         _x addEventHandler ["CuratorWaypointPlaced", {
@@ -65,7 +72,7 @@
         }];
         */
 
-        [player, "homecoming_zeus_nerf", 3, true] call ace_common_fnc_setAimCoef;
+        
 
     } forEach allCurators;
 
@@ -111,8 +118,15 @@
       params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
       _position = ASLToAGL _position;
 
+      private _radio = "land_gm_euro_furniture_radio_01" createVehicle [0,0,0];
+      _radio setPos _position;
+
       private _source = createSoundSource ["sfxsound19", _position, [], 0];
-      [_source, _position] call homecoming_fnc_soundSourceHelper;
+      [_source, _radio, false] call homecoming_fnc_soundSourceHelper;
+      
+      {
+        _x addCuratorEditableObjects [[_radio], false];
+      } forEach allCurators;
 
     }] call zen_custom_modules_fnc_register;
 
@@ -122,8 +136,15 @@
       params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
       _position = ASLToAGL _position;
 
+      private _radio = "land_gm_euro_furniture_radio_01" createVehicle [0,0,0];
+      _radio setPos _position;
+
       private _source = createSoundSource ["sfxsound20", _position, [], 0];
-      [_source, _position] call homecoming_fnc_soundSourceHelper;
+      [_source, _radio, false] call homecoming_fnc_soundSourceHelper;
+      
+      {
+        _x addCuratorEditableObjects [[_radio], false];
+      } forEach allCurators;
 
     }] call zen_custom_modules_fnc_register;
 
@@ -133,8 +154,15 @@
       params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
       _position = ASLToAGL _position;
 
+      private _radio = "land_gm_euro_furniture_radio_01" createVehicle [0,0,0];
+      _radio setPos _position;
+
       private _source = createSoundSource ["sfxsound10", _position, [], 0];
-      [_source, _position] call homecoming_fnc_soundSourceHelper;
+      [_source, _radio, false] call homecoming_fnc_soundSourceHelper;
+      
+      {
+        _x addCuratorEditableObjects [[_radio], false];
+      } forEach allCurators;
 
     }] call zen_custom_modules_fnc_register;
 
@@ -144,8 +172,15 @@
       params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
       _position = ASLToAGL _position;
 
+      private _radio = "land_gm_euro_furniture_radio_01" createVehicle [0,0,0];
+      _radio setPos _position;
+
       private _source = createSoundSource ["sfxsound11", _position, [], 0];
-      [_source, _position] call homecoming_fnc_soundSourceHelper;
+      [_source, _radio, false] call homecoming_fnc_soundSourceHelper;
+      
+      {
+        _x addCuratorEditableObjects [[_radio], false];
+      } forEach allCurators;
 
     }] call zen_custom_modules_fnc_register;
 
@@ -158,8 +193,15 @@
       params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
       _position = ASLToAGL _position;
 
+      private _radio = "land_gm_euro_furniture_radio_01" createVehicle [0,0,0];
+      _radio setPos _position;
+
       private _source = createSoundSource ["sfxsound18", _position, [], 0];
-      [_source, _position] call homecoming_fnc_soundSourceHelper;
+      [_source, _radio, false] call homecoming_fnc_soundSourceHelper;
+      
+      {
+        _x addCuratorEditableObjects [[_radio], false];
+      } forEach allCurators;
 
     }] call zen_custom_modules_fnc_register;
 
@@ -171,8 +213,15 @@
       params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
       _position = ASLToAGL _position;
 
+      private _radio = "land_gm_euro_furniture_radio_01" createVehicle [0,0,0];
+      _radio setPos _position;
+
       private _source = createSoundSource ["sfxsound16", _position, [], 0];
-      [_source, _position] call homecoming_fnc_soundSourceHelper;
+      [_source, _radio, false] call homecoming_fnc_soundSourceHelper;
+      
+      {
+        _x addCuratorEditableObjects [[_radio], false];
+      } forEach allCurators;
 
     }] call zen_custom_modules_fnc_register;
 

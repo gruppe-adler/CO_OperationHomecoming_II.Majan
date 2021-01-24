@@ -3,7 +3,7 @@
 */
 
 author = "nomisum für Gruppe Adler";                                               // Missionsersteller
-onLoadName = "Operation Homecoming";                                                   // Name der Mission
+onLoadName = "Operation Homecoming II";                                                   // Name der Mission
 onLoadMission = "";                                                             // Beschreibung der Mission (wird im Ladebildschirm unterhalb des Ladebildes angezeigt)
 loadScreen = "data\loading.paa";                                                // Ladebild
 overviewPicture = "";                                                           // Bild, das in der Missionsauswahl angezeigt wird
