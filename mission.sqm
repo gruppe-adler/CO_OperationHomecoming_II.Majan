@@ -25369,7 +25369,7 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={1860.802,10.496296,1954.5211};
+						position[]={1860.8024,10.496296,1954.521};
 					};
 					areaSize[]={1,-1,1};
 					id=1586;
@@ -33671,7 +33671,7 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={2068.9666,10.499137,2596.9109};
+						position[]={2068.9663,10.499137,2596.9111};
 					};
 					areaSize[]={1,-1,1};
 					id=1798;
@@ -34057,7 +34057,7 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={2069.6704,10.499137,2608.9673};
+						position[]={2069.6707,10.499137,2608.9673};
 					};
 					areaSize[]={1,-1,1};
 					id=1800;
@@ -36566,7 +36566,7 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={1809.9941,10.493239,2359.9824};
+						position[]={1809.9944,10.493239,2359.9812};
 					};
 					areaSize[]={1,-1,1};
 					id=2038;
@@ -36759,7 +36759,7 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={1810.0098,10.493239,2364.1423};
+						position[]={1810.01,10.493239,2364.1411};
 					};
 					areaSize[]={1,-1,1};
 					id=2043;

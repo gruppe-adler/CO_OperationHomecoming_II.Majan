@@ -8,6 +8,6 @@
 class buzz
 {
     name = "buzz";
-    sound[] = {getMissionPath "USER\sound\buzz.ogg", 1, 1, 50};
+    sound[] = {"USER\sound\buzz.ogg", 1, 1, 50};
     titles[] = {0,""};
 };
