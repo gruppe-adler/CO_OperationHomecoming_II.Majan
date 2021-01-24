@@ -88,6 +88,19 @@
     }] call zen_custom_modules_fnc_register;
 
 
+    ["H O M E C O M I N G - ZEUS", "ZeusShake",
+    {
+      // Get all the passed parameters
+      params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+      _position = ASLToAGL _position;
+
+      [_objectUnderCursor] remoteExec ["homecoming_fnc_addZeusShake", _objectUnderCursor];
+
+    }] call zen_custom_modules_fnc_register;
+
+
+
+
     ["H O M E C O M I N G - DSAI", "DSAI Mute Unit",
     {
       // Get all the passed parameters

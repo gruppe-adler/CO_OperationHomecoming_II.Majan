@@ -10,6 +10,7 @@ class homecoming
            file = "USER\functions";
 
            class addModules { postInit = 1; };
+           class addZeusShake;
            class createMusicCarrier;
            class brokenRadio;
 
