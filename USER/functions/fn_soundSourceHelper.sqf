@@ -27,7 +27,7 @@ _helper addEventHandler ["Deleted", {
   deleteVehicle (_entity getVariable ["soundSource", objNull]);
 }];
 
-_helper addEventHandler ["HitPart", {
+_helper addMPEventHandler ["MPHit", {
   (_this select 0) params ["_target", "_shooter", "_projectile", "_position", "_velocity", "_selection", "_ammo", "_vector", "_radius", "_surfaceType", "_isDirect"];
   
   private _pos = getPos _target;
